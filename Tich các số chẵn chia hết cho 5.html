@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập vào a")
+    let b = +prompt("Nhập vào b ")
+    tich = 1
+    for (let i = a; i <= b; i++) {
+        if (i % 2 === 0 && i % 5 === 0) {
+            tich *= i;
+        }
+    }
+    document.write('Tích các số chẵn chia hết cho 5 từ ' + a + ' đến ' + b + " là " + tich);
+
+</script>
+</body>
+</html>

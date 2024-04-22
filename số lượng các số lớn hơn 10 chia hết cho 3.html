@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập vào a")
+    let b = +prompt("Nhập vào b")
+    let soluong = 0
+    for (let i = a; i <= b; i++)
+        if (i > 10 && i % 3 === 0)
+            soluong = soluong + 1;
+    document.write('Số lượng các số lớn hơn 10 và chia hết cho 3 từ ' + a + ' đến ' + b + ' là: ' + soluong);
+
+
+</script>
+</body>
+</html>
