@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ab = [1, 2, 3, 4, 5, 2, 0, 1, 2]
+    let min = 1000
+    for (let i = 0; i < ab.length; i++) {
+        if (ab[i] % 2 === 0 && min > ab[i]) {
+            min = ab[i]
+        }
+    }
+    document.write('Min của dãy chẵn là: ' + min)
+
+</script>
+</body>
+</html>

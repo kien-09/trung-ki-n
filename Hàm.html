@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr =[];
+    // let n = +prompt('Nhap vao so luong phan tu: ');
+    // for (let i = 1; i <=n ; i++) {
+    //     let pt = +prompt('Nhap vao phan tu thu '+i);
+    //     arr.push(pt);
+    // }
+    // document.write(arr)
+
+
+    // function in5du2(a, b) {
+    //     for (let i = 0; i <= b; i++) {
+    //         if (i % 5 == 2) {
+    //             document.write(i + '<br>')
+    //         }
+    //     }
+    //     return a + b;
+    // }
+
+    // let x = in5du2(2,13);
+    //  let y = in5du2(3,52);
+    //  alert(x+ ' ,'+y)
+
+    //Tạo hàm nhận vào một đối số dạng số, tăng giá trị của đối số đó lên 1 và trả lại giá trị cho lời gọi hàm.
+    //Gọi hàm từ trong phần <body> của trang web và hiện thị kết quả lên màn hình.
+    // function b2(xx) {
+    //     xx += 1;
+    //     return xx;
+    // }
+
+    // Viết hàm nhập vào 3 số nguyên bất kỳ,trả về số nguyên có giá trị nhỏ nhất.
+    // function b3(q, w, e){
+    //     let min = q;
+    //     if (min > w){
+    //         min = w;
+    //     }
+    //     if (min >e){
+    //         min = e;
+    //     }
+    //     return min;
+    // }
+    // alert(b3(11, 21, 9))
+
+
+    // Bài 1: Viết hàm trả về bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    // function b1(a) {
+    //     let binhphuong = Math.pow(a, 2);
+    //     return binhphuong;
+    // }
+    // let a = +prompt('Nhập số bất kì')
+    // let kq = b1(a)
+    // document.write('kết quả bình phương của ' + a + ' là ' + kq)
+
+    // Bài 2: Viết hàm trả về diện tích, hàm tính chu vi hình tròn của bán kính được đưa vào. Gọi hàm vừa xây dựng được
+    // function b2a(R) {
+    //      dientich = Math.pow(R, 2) * 3.14
+    //     return dientich;
+    // }
+    // let R = +prompt('Nhập bán kính')
+    // let kq1= b2a(R)
+    // document.write('Diên tich hinh tron khi bán kính bằng ' + R + ' là ' + kq1 + '<br>')
+    // function b2b(R){
+    //     chuvi = 2*R*3.14
+    //     return chuvi;
+    // }
+    // let kq2= b2b(R)
+    // document.write('Chu vi hinh tron khi bán kính bằng ' + R + ' là ' + kq2)
+
+    // Bài 3: Viết hàm trả về giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    // function b3(a) {
+    //     let gt = 1;
+    //     for (let i = 1; i <= a; i++) {
+    //         gt *= i
+    //     }
+    //     return gt;
+    // }
+    // let a = +prompt('Nhap so nguyen ')
+    // let kq = b3(a)
+    // document.write('Giai thưa cua ' + a + ' là ' + kq)
+
+    // Bài 4: Viết hàm nhận vào 3 số nguyên bất kỳ, trả về tổng 3 số.
+    // function b4(a,b,c){
+    //     let tong = a+b+c
+    //     return tong;
+    // }
+    // let a = +prompt("nhap a")
+    // let b = +prompt('Nhap b')
+    // let c = +prompt('Nhap c')
+    // let kq = b4(a,b,c)
+    // document.write('Tong cua '+a+','+b+','+c+' là '+kq)
+
+    // Bài 5: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không. Nếu là nguyên dương trả về true, ngược lại trả về false.
+    // function b5(a){
+    //     if (a>=0){
+    //         return true
+    //     }
+    //     else {
+    //         return  false
+    //     }
+    // }
+    // let a =+prompt('Nhập só vào')
+    // let kq = b5(a)
+    // document.write(kq)
+
+    // Bài 6: Viết hàm nhận vào 1 mảng, trả về tổng các số > 10
+    function ham(array) {
+        let tong = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] > 10) {
+                tong = tong + array[i];
+            }
+        }
+        return tong;
+    }
+    let i = [9, 10, 11, 12, 15, 19, 21, 25];
+    let kq1 = ham(i);
+    document.write('Tong các số lớn hơn 10 là: ' + kq1+'<br>');
+
+    // Bài 7: Viết hàm nhận vào 1 mảng, trả về số lượng các số > 10
+    function b7(a){
+        soluong= 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i]>10){
+                soluong = soluong + 1
+            }
+        }
+        return soluong;
+    }
+    let kq2 = b7(i);
+    document.write('Số lượng các số lớn hơn 10 là: '+kq2+'<br>')
+
+    // Bài 8: Viết hàm nhận vào 1 mảng, trả TBC các số > 10. (Phải dùng các hàm đã tạo ở bài 6 và 7)
+    function b8(abc){
+       TBC = kq1 / kq2
+        return TBC;
+    }
+    let kq3 = b8(i)
+    document.write('Trung bình cộng cac số lớn hơn 10 là: '+ kq3)
+
+
+</script>
+</body>
+</html>

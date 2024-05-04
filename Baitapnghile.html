@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--&lt;!&ndash;<input type="text" id="a" placeholder="Nhap link anh">&ndash;&gt;-->
+<!--&lt;!&ndash;<button onclick="getdata">Nhấn</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<h1 id="kq"></h1>&ndash;&gt;-->
+<!--&lt;!&ndash;<img src="" alt="" id="anh">&ndash;&gt;-->
+<!--&lt;!&ndash;<a href="" id="link">Nhấn</a>&ndash;&gt;-->
+<!--<div id="kq"></div>-->
+<!--&lt;!&ndash;<p id="max"></p>&ndash;&gt;-->
+<!--<h2 id="dis"></h2>-->
+<!--<input type="text" id="so">-->
+<!--<button onclick="them()">them</button>-->
+<!--<button onclick="dem ()">Dem</button>-->
+<!--<h3 id="kq"></h3>-->
+<script>
+    // b1:cách khai báo biến
+    // let,var,const : từ khóa để khai bao bien
+    // let a= 10
+    // let b = 'hello'
+    // const PI = 3,14
+
+    // b2:có mấy kiểu dữ liệu
+    // number(1,2,3,...), string ('abc'),boolean(true,false), object
+    // let obj ={
+    //     name:'Tran trung kien'
+    // }
+    // let d = null // khọng co gi
+    // let e = undefined// khong xac dinh
+
+    // b3:làm sao để quy định kiểu dữ liệu cho 1 biến // xác định dựa trên du liệu cuoi cung ma bien do sư dụng
+
+    // b4:có những cách nào để hiển thị chữ hello ra
+    // alert('hello')
+    // document.write('hello')
+    // document.getElementById('kq').innerHTML = 'hello'
+    // console.log('hello')
+
+    // b5:có những cách nào để nhập vào biến a
+    // let a = prompt('nhap a')
+    // function getdata (){//Như 1 hành động tự dinh nghia va se duoc goi khi nguoi dung thuc hien 1 hanh dong nao do khi su dung
+    //     let name = document.getElementById('a').value;
+    //     document.write(name);
+    // }
+    //
+    // b6:in ra thẻ h1, img, a với JS
+    // document.getElementById('anh').src = "https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/414008793_3620962761564113_4088721283671314050_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFHZZUk4AyU69iBMB2bH9tVEJEpg36GWscQkSmDfoZax1UPD363FlVYJKIbiJZcFNeRtTGRE0MHsmXSU8Ys10Gp&_nc_ohc=Rcj8WVIyRnYQ7kNvgH9Nlnh&_nc_ht=scontent.fhan18-1.fna&oh=00_AfB_YKVk6Dug1N7YFEKEMvMmLbjn0n0ergBP4E0KOW_nYg&oe=663956DE"
+    // document.getElementById('link').href = "https://www.facebook.com/TrungKien.NTTD.02"
+
+    // b7: Nhập vào tên, in ra tên
+
+    // b8: Nhập vào a, in ra bình phương của a
+    // let a = +prompt("nhập a")
+    // console.log(a*a)
+    // console.log(Math.pow(a,2))
+
+    // b9:Nhập vào tên, in ra tên với h1
+
+    // b10:Nhập vào đường dẫn cho biến src, in ra ảnh với nguồn ảnh là biến src
+    // function getdata() {
+    //     let link = document.getElementById("a").value;
+    //     document.getElementById("anh").src = link;
+    // }
+
+    // b11:Nhập vào tuổi trong biến age, in ra 'Đủ tuổi' nếu age>18
+    // let age = +prompt("nhap tuoi")
+    // if (age> 18 ){
+    //     alert('du tuoi')
+    // }else {
+    //     alert('khong du tuoi')
+    // }
+
+    // b12:Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ
+    // let a = +prompt('nhap vao so')
+    // if (a %2 ===0){
+    //     alert('hello')
+    // }else {
+    //     alert('hi')
+    // }
+
+    // b13:Nhập vào a, b. Nếu a>b in ra tổng, nếu a<b in ra tích, nếu a =b in ra 'Hihi'
+    // let a = +prompt('nhap a')
+    // let b = + prompt('nhap b')
+    // if (a>b){
+    //     let tong = a +b ;
+    //     alert("tong la; "+ tong);
+    // }else if (a<b){
+    //     let tich = a*b
+    //     alert("tich la: "+ tich)
+    // }else {
+    //     alert("hihi")
+    // }
+
+    // b14:Nhập a,b,c. In ra số lớn nhất
+    // let a = +prompt('Nhap a')
+    // let b = +prompt('Nhap b')
+    // let c = +prompt('Nhap c')
+    // let max = a
+    // if(max < b){
+    //     max = b
+    // }
+    // if (max <c){
+    //     max= c
+    // }
+    // alert(" số lơn nhât slaf : "+ max)
+
+    // b15:In ra 100 chữ 'Hello'
+    // for (let i = 0; i < 100; i++) {
+    //     console.log('hello')
+    // }
+
+    // b16:Nhập vào N từ prompt. In ra N lần chữ 'Hello' vào 1 thẻ div có id = kq
+    // let N = +prompt("Nhập N")
+    // let html = ''
+    // for (let i = 1; i <=N; i++){
+    //     html = html + '<h4>' + i + '. hello' + '</h4>'
+    // }
+    // document.getElementById('kq').innerHTML= html;
+
+    // b17:In ra cac số từ 1 đến 1000;
+    // let dem= ''
+    // for (let i = 1; i <=1000 ; i++) {
+    //     dem = dem + i + "<br>"
+    // }
+    // document.write(dem)
+
+    // b18:In ra cac số từ a đến b:
+    // let a = +prompt('Nhap a ')
+    // let b = +prompt('Nhap b')
+    // let dem = ''
+    // for (let i = a; i <= b; i++) {
+    //     dem = dem + i + '<br>'
+    // }
+    // document.write(dem)
+
+    // b19:In ra cac số từ a đến b, mỗi số trong 1 thẻ <h1>;
+    // let a = +prompt('Nhap a ')
+    // let b = +prompt('Nhap b')
+    // let dem = ''
+    // for (let i = a; i <= b; i++) {
+    //     dem = dem +'<h1 >'+  i +'</h1>'+'<br>'
+    // }
+    // document.write(dem)
+
+    // b20:In ra các số chẵn tu a đến b;
+    // let a = +prompt('Nhap a ')
+    // let b = +prompt('Nhap b')
+    // let dem = '';
+    // for (let i = a; i <= b; i++) {
+    //     if (i % 2 === 0) {
+    //         dem = dem + i + '<br>'
+    //     }
+    // }
+    // document.write(dem)
+
+    // b21:In ra các số từ a đến b số chẵn trong h2, so le trong h1;
+    // let a = +prompt('Nhap a ')
+    // let b = +prompt('Nhap b')
+    // let dem1 = '';
+    // let dem2= '';
+    // for (let i = a; i <=b ; i++) {
+    //     if (i%2===0){
+    //         dem1 = dem1 + '<h2>'+ i + '</h2>' +'<br>'
+    //     }
+    //     else {
+    //         dem2 = dem2 + '<h1>'+ i + '</h1>'+ '<br>'
+    //     }
+    // }
+    // document.write(dem1+dem2)
+
+    // b22:Tính tích, Tính Tổng các số chia 5 dư 2 từ a đến b.
+    // let a= +prompt('Nhap a')
+    // let b=+prompt('Nhap b')
+    // let tong = 0;
+    // let tich= 1;
+    // for (let i = a; i <=b ; i++) {
+    //     if (i%5===2){
+    //         tong += i
+    //         tich *= i
+    //     }
+    // }
+    // document.write(tong +','+tich)
+
+    // b23:Đếm các số chia 5 dư 2 từ a đến b
+    // let a= +prompt('Nhap a')
+    // let b=+prompt('Nhap b')
+    // let soluong = 0;
+    // for (let i = a; i <=b ; i++) {
+    //     if (i%5===2){
+    //         soluong += 1 ;
+    //     }
+    // }
+    // document.write(soluong)
+
+    // b24:In ra các phần tử trong mảng
+
+
+    // b25:In ra các phần tử chẵn trong mảng;
+
+
+    // b26:In ra các phần số chẵn trong h2, le trong h1;
+
+
+    // Tính tích các phần tử.
+    // Tính tích các phần tử chẵn
+    // Tính Tổng các phần tử.
+    // Tính Tổng các phần tử chẵn
+    // Tìm max trong mảng.
+    // Tìm max của các phần tử chẵn trong mảng
+    // Đếm có  bao nhiêu phần tử chia 5 dư 2 trong mảng:
+    // let arr = [12,34,25,32,11,27,17]             // cách 1
+    // let dem = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i]%5 ===2){
+    //         dem ++;
+    //     }
+    // }
+    // alert(dem)
+
+    // let arr = [];
+    //
+    // function them() {
+    //     let pt = +document.getElementById('so').value;
+    //     arr.push(pt);
+    //     let str = '';
+    //     for (let i = 0; i < arr.length; i++) {
+    //         str += arr[i] + "<br>"
+    //     }
+    //     document.getElementById("dis").innerHTML = str;
+    //     // An them xong thi xoa trang input
+    //     document.getElementById("so").value = '';
+    // }
+    // function  dem(){
+    //     let d = 0;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (arr[i]%5 ===2){
+    //             d++;
+    //         }
+    //     }
+    //     document.getElementById('kq').innerHTML = d;
+    // }
+
+
+    // Nhap vào a, đếm số lượng a trong mảng.
+    //     Nhap vao a, tim vi tri cua a trong mảng.
+</script>
+</body>
+</html>

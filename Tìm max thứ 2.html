@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 4, 5, 5, 5];
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (max<arr[i]){
+            max = arr[i]
+        }
+    }
+    let max2 = -1000;
+    for (let i = 0; i < arr.length; i++) {
+        if (max2 <arr[i]&& arr[i]<max){
+            max2= arr[i]
+        }
+    }
+    alert(max2)
+
+</script>
+</body>
+</html>
